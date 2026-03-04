@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi - Garis Hidup</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+       <div class="header">
+            <img src="gedung itenas.jpg" alt="Gedung">
+            <img src="gedung itenas.jpg" alt="Gedung">
+            <img src="gedung itenas.jpg" alt="Gedung">
+            <img src="gedung itenas.jpg" alt="Gedung">
+            <img src="gedung itenas.jpg" alt="Gedung">
+            <img src="gedung itenas.jpg" alt="Gedung">
+        </div>
+
+        <div class="main-body">
+            <div class="sidebar">
+            </div>
+
+            <div class="content">
+                <h2>Program Garis Hidup Tanggal Lahir</h2>
+                
+                <p>Program ini merupakan program untuk mendeskripsikan karakter anda berdasarkan tanggal<br>lahir yang kemudian hasilnya akan dikategorikan sebagai Garis Lahir 1 sampai 9.</p>
+                <br>
+                <p>Angka-angka dalam tanggal lahir Anda menyimpan banyak makna. Jumlahkan sampai<br>menjadi satu angka, lalu lihat artinya? (misalnya Anda lahir tanggal 25 desember 1998, 25 +<br>12 + 1998 = 2 + 5 + 1 + 2 + 1 + 9 + 8 + 8 = 36 = 3 + 6 = 9)</p>
+                
+                <h3 class="subtitle">Ayo Cari Tahu Kepribadian Kamu !</h3>
+                <hr>
+
+                <form id="kalkulatorForm">
+                    <table class="form-table">
+                        <tr>
+                            <td class="label-col">Masukkan Tanggal Lahir Anda</td>
+                            <td class="colon-col">:</td>
+                            <td><select id="tanggal" required></select></td>
+                        </tr>
+                        <tr>
+                            <td class="label-col">Masukkan Bulan Lahir Anda</td>
+                            <td class="colon-col">:</td>
+                            <td>
+                                <select id="bulan" required>
+                                    <option value="1">Januari</option>
+                                    <option value="2">Februari</option>
+                                    <option value="3">Maret</option>
+                                    <option value="4">April</option>
+                                    <option value="5">Mei</option>
+                                    <option value="6">Juni</option>
+                                    <option value="7">Juli</option>
+                                    <option value="8">Agustus</option>
+                                    <option value="9">September</option>
+                                    <option value="10">Oktober</option>
+                                    <option value="11">November</option>
+                                    <option value="12">Desember</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="label-col">Masukkan Tahun Lahir Anda</td>
+                            <td class="colon-col">:</td>
+                            <td><select id="tahun" required></select></td>
+                        </tr>
+                    </table>
+                    
+                    <div class="buttons">
+                        <button type="submit">kirim</button>
+                        <button type="button" onclick="resetForm()">reset</button>
+                    </div>
+                </form>
+
+                <hr>
+
+                <div class="output-section">
+                    <h3>Output</h3>
+                    <table class="output-table">
+                        <tr>
+                            <td class="out-label">Tanggal</td>
+                            <td>:</td>
+                            <td><input type="text" id="out-tanggal" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="out-label">Bulan</td>
+                            <td>:</td>
+                            <td><input type="text" id="out-bulan" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="out-label">Tahun</td>
+                            <td>:</td>
+                            <td><input type="text" id="out-tahun" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="out-label">Hasil 1</td>
+                            <td>:</td>
+                            <td><input type="text" id="out-hasil1" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="out-label">Hasil 2</td>
+                            <td>:</td>
+                            <td><input type="text" id="out-hasil2" readonly></td>
+                        </tr>
+                        <tr>
+                            <td class="out-label">Hasil Akhir</td>
+                            <td>:</td>
+                            <td><input type="text" id="out-hasilakhir" readonly></td>
+                        </tr>
+                    </table>
+
+                    <hr>
+
+                    <div id="hasil-teks-container" style="display: none; margin-top: 20px;">
+                        <h3 id="judul-karakter" style="margin-bottom: 10px;"></h3>
+                        <p id="deskripsi-karakter" style="line-height: 1.5; font-size: 13px; text-align: justify;"></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            280224<br>
+            Sistem Informasi | ITENAS 2024
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

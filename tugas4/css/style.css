@@ -1,0 +1,169 @@
+/* Reset & Background */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    /* Background menggunakan gambar logo berulang */
+    background-color: #ffffff;
+    background-image: url('../logo itenas.jpg'); 
+    background-repeat: repeat;
+    background-size: 150px; /* Kamu bisa ubah angkanya jika logonya terlalu besar/kecil */
+    
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+/* Container Utama */
+.container {
+    width: 900px;
+    background-color: #e59e35; /* Warna mustar/oranye dari gambar */
+    border: 5px solid #7c3b3b; /* Warna border cokelat kemerahan */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Gambar */
+/* Header Gambar */
+.header {
+    height: 240px; /* Diperbesar sedikit agar 2 baris gambar terlihat jelas */
+    display: flex;
+    flex-wrap: wrap; /* Mengizinkan gambar turun ke baris bawah */
+    overflow: hidden;
+    border-bottom: 2px solid #7c3b3b;
+}
+.header img {
+    width: 33.333%; /* Membagi 3 gambar sejajar (100% / 3) */
+    height: 50%;    /* Mengambil setengah tinggi container untuk tiap baris */
+    object-fit: cover;
+    display: block;
+}
+
+/* Body Layout 2 Kolom */
+.main-body {
+    display: flex;
+    min-height: 500px;
+}
+
+/* Sidebar Kiri */
+.sidebar {
+    width: 150px;
+    border-right: 1px solid #7c3b3b;
+    padding-top: 20px;
+}
+.sidebar a {
+    display: block;
+    text-decoration: none;
+    color: #6a4cba; /* Warna ungu/biru link */
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid #7c3b3b;
+}
+.sidebar a:first-child {
+    border-top: 1px solid #7c3b3b;
+}
+
+/* Konten Kanan */
+.content {
+    flex: 1;
+    padding: 20px 30px;
+}
+
+.content h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.content p {
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.subtitle {
+    margin-top: 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #555;
+    margin: 10px 0 20px 0;
+}
+
+/* Form Styling Sejajar */
+.form-table {
+    width: 100%;
+    font-size: 12px;
+}
+.form-table td {
+    padding: 8px 0;
+}
+.label-col {
+    width: 250px;
+    text-align: center;
+}
+.colon-col {
+    width: 20px;
+    text-align: center;
+}
+select {
+    padding: 2px;
+    width: 80px;
+    border: 1px solid #999;
+}
+
+/* Tombol */
+.buttons {
+    margin-left: 100px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+button {
+    padding: 2px 8px;
+    font-size: 11px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #999;
+    border-radius: 2px;
+}
+
+/* Output Styling */
+.output-section h3 {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.output-table {
+    margin-left: 100px;
+    font-size: 12px;
+}
+.output-table td {
+    padding: 3px;
+}
+.out-label {
+    width: 100px;
+}
+.output-table input {
+    width: 150px;
+    padding: 2px 4px;
+    border: 1px solid #fff; /* Tampilan border tipis putih */
+    background-color: #fff;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+.footer {
+    background-color: #ffaa00;
+    text-align: center;
+    padding: 10px;
+    font-size: 11px;
+    border-top: 2px solid #7c3b3b;
+    font-weight: bold;
+}
