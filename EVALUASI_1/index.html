@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Sederhana ITENAS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <div class="header-box"></div>
+        <div class="header-box"></div>
+        <div class="header-box"></div>
+        <div class="header-box"></div>
+        <div class="header-box"></div>
+        <div class="header-box"></div>
+    </div>
+
+    <div class="main-body">
+        <div class="sidebar">
+            <div onclick="showPage('home')">Home</div>
+            <hr>
+            <div onclick="showPage('menu')">Menu</div>
+            <hr>
+            <div onclick="showPage('calc')">Calculator</div>
+        </div>
+
+        <div class="content">
+            
+            <div id="page-home">
+                klik button disamping >> <button onclick="shoutAlert()">Shout</button>
+            </div>
+
+            <div id="page-menu" style="display: none;">
+                <table class="menu-table">
+                    <tr>
+                        <td width="5%">No</td>
+                        <td width="35%">Makanan/Minuman</td>
+                        <td width="20%">Harga</td>
+                        <td width="20%">Pesan</td>
+                        <td rowspan="7" align="center" style="vertical-align: middle;">
+                            <button class="btn-reset-menu" onclick="resetMenu()">Reset</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Bakso Istimewa</td>
+                        <td>@ Rp 12000</td>
+                        <td><input type="number" id="qty1" value="0" min="0" oninput="hitungMenu()"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Soto Spesial</td>
+                        <td>@ Rp 10000</td>
+                        <td><input type="number" id="qty2" value="0" min="0" oninput="hitungMenu()"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Mie Ayam Super</td>
+                        <td>@ Rp 15000</td>
+                        <td><input type="number" id="qty3" value="0" min="0" oninput="hitungMenu()"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" align="right">Jumlah Total</td>
+                        <td><input type="text" id="total" value="0" readonly></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" align="right">Diskon</td>
+                        <td><input type="text" id="diskon" value="0" readonly></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" align="right">Jumlah Bayar</td>
+                        <td><input type="text" id="bayar" value="0" readonly></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="page-calc" style="display: none;">
+                <div class="calc-row">
+                    <input type="number" id="calc-in1">
+                    <select id="calc-op">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                        <option value="*">*</option>
+                        <option value="/">/</option>
+                        <option value="%">%</option>
+                        <option value="^">^</option>
+                    </select>
+                    <input type="number" id="calc-in2">
+                    =
+                    <input type="text" id="calc-result" readonly>
+                </div>
+                <div class="calc-buttons">
+                    <button onclick="hitungKalkulator()">Hitung</button>
+                    <button onclick="resetKalkulator()">Reset</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        280224<br>
+        Sistem Informasi | ITENAS 2024
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
